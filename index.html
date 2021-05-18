@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Products API</title>
+    <script src="./jquery-3.4.1.min.js"></script>
+    <script src="./popper.min.js"></script>
+    <script src="./bootstrap.min.js"></script>
+    <script src="./myscripts.js"></script>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="container">
+    <h1>Recipies API Client</h1>
+
+    <div class="modal fade" id="AddModel" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title">Add Product</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+              </div>
+              <div class="modal-body">
+                  <input type= "hidden", id="updateId">
+
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text"
+                      class="form-control" name="" id="name" aria-describedby="updatehelpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted"></small>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="text"
+                      class="form-control" name="" id="price" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted"></small>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="color">Color</label>
+                    <input type="text"
+                      class="form-control" name="" id="color" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted"></small>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="department">Department</label>
+                    <input type="text"
+                      class="form-control" name="" id="department" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted"></small>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" name="" id="description" rows="3"></textarea>
+                  </div>
+                  
+
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" id="formadd" class="btn btn-primary">Add</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <button class="btn btn-info addbtn">Add products</button>
+
+    <div id="recipies">
+        Loading ...
+    </div>
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#updateModel">
+      Launch
+    </button>
+     -->
+    <!-- Modal -->
+    <div class="modal fade" id="updateModel" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Update Product</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <input type= "hidden", id="UpdateId">
+
+                    <div class="form-group">
+                      <label for="UpdateName">Name</label>
+                      <input type="text"
+                        class="form-control" name="" id="UpdateName" aria-describedby="updatehelpId" placeholder="">
+                      <small id="helpId" class="form-text text-muted"></small>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="UpdatePrice">Price</label>
+                      <input type="text"
+                        class="form-control" name="" id="UpdatePrice" aria-describedby="helpId" placeholder="">
+                      <small id="helpId" class="form-text text-muted"></small>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="UpdateColor">Color</label>
+                      <input type="text"
+                        class="form-control" name="" id="UpdateColor" aria-describedby="helpId" placeholder="">
+                      <small id="helpId" class="form-text text-muted"></small>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="UpdateDepartment">Department</label>
+                      <input type="text"
+                        class="form-control" name="" id="UpdateDepartment" aria-describedby="helpId" placeholder="">
+                      <small id="helpId" class="form-text text-muted"></small>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="UpdateDescription">Description</label>
+                      <textarea class="form-control" name="" id="UpdateDescription" rows="3"></textarea>
+                    </div>
+                    
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" id="updateSave" class="btn btn-primary">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
